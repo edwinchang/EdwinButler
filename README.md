@@ -13,6 +13,8 @@
 ------
 文件夹位置：手机等终端的APP指定文件夹一般存在“/data/data/com.edwin.edwinbutler/files/”下。
 ------
+已打包的APK文件在：当前项目的“EdwinButler_apk”目录下。
+------
 关于如何在PC端进行文件夹共享可参见：http://jingyan.baidu.com/article/e8cdb32b3299f737042bad59.html
 ------
 另外，当前网上实现类似使用smb协议传输文件功能的较好的APP是：AndSMB（为共享软件，高级功能收费，发行公司：LYSESOFT），有兴趣也可以去下载试用。
