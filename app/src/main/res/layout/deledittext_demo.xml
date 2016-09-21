@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/back_red"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <com.edwin.edwinbutler.DelEditText
+        android:id="@+id/edit_search"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/del_edit_text_bg_frame_search"
+        android:hint="带删除按钮的EditText~"
+        android:maxLength="20"
+        android:padding="5dp"
+        android:singleLine="true" />
+</LinearLayout>

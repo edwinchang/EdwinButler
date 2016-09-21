@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_black"
+                android:orientation="vertical"
+                android:padding="5dp">
+    <ImageView
+        android:id="@+id/notify_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@mipmap/edwinbutler_icon"
+        />
+    <TextView
+        android:id="@+id/notify_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/0 文件:xxx.TXT下载中..."
+        android:layout_toRightOf="@id/notify_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/bg_white"
+        android:background="@color/bg_black"
+        android:maxLines="3"
+        />
+    <ProgressBar
+        android:id="@+id/notify_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="100"
+        android:layout_below="@+id/notify_msg"
+        />
+</RelativeLayout>

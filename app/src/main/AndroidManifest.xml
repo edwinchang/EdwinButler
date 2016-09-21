@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.edwin.edwinbutler"
+    >
+
+    <!-- To auto-compl ete the email text field in the login form with the user's emails -->
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS"/>-->
+    <!--<uses-permission android:name="android.permission.READ_CONTACTS"/>-->
+    <!--<uses-permission android:name="android.permission.READ_PROFILE"/>-->
+    <!--<uses-permission android:name="android.permission.READ_SMS"/>-->
+    <!--<uses-permission android:name="android.permission.WRITE_CONTACTS"/>-->
+    <!--<uses-permission android:name="android.permission.WRITE_PROFILE"/>-->
+    <!--<uses-permission android:name="android.permission.WRITE_SMS"/>-->
+    <!-- 以上权限在正式发布时需要注释掉 -->
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 用于完成自动启动服务 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 可开机自动启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_eb"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:sharedUserId="android.uid.system"
+        >
+
+        <!--======================Activity======================-->
+        <!--不带最上方标题栏-->
+        <!--android:theme="@style/Theme.AppCompat.NoActionBar" >-->
+
+        <!--android:name=".EdwinTestActivity"-->
+        <!--注：如果调试时，则使用".EdwinTestActivity"-->
+        <!--注：如果发布时，则使用".EdwinMainActivity"-->
+        <activity
+            android:name=".EdwinMainActivity"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SecondActivityDemoActivity"></activity>
+        <activity android:name=".SmsContactManagerActivity"></activity>
+
+        <activity
+            android:name=".BottomNaviBarDemoMainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
+
+        <activity android:name=".FileManagerDemoActivity"> </activity>
+        <activity android:name=".HttpRequestDemoActivity"> </activity>
+        <activity android:name=".SmbFileManagerActivity"
+                  android:windowSoftInputMode="adjustPan"> </activity>
+
+        <!--======================Service======================-->
+        <!-- 配置Service组件,同时配置一个action -->
+        <service android:name=".ServiceDemo">
+            <!--<intent-filter>-->
+            <!--<action android:name="com.edwin.edwinbutler.service.ServiceDemo"/>-->
+            <!--</intent-filter>-->
+        </service>
+
+        <service android:name=".AlarmLongRunningService">
+        </service>
+
+        <service
+            android:name=".SmbFileManagerService"
+            android:persistent="true">
+        </service>
+
+        <!--======================Receiver======================-->
+        <!-- 开机自动启动，用来开启服务或应用 -->
+        <receiver android:name=".BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.edwin.edwinbutler.service.AlarmLongRunningService_Start"/>
+                <action android:name="com.edwin.edwinbutler.service.AlarmLongRunningService_Stop"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".AlarmLongRunningReceiver"></receiver>
+
+    </application>
+</manifest>

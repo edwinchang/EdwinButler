@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+        android:id="@+id/mybutton00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:allowUndo="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="获取短信"
+        />
+
+    <Button
+        android:id="@+id/mybutton01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:allowUndo="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="插入短信"
+        />
+
+    <Button
+        android:id="@+id/mybutton02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:allowUndo="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="获取通讯录"
+        />
+
+    <Button
+        android:id="@+id/mybutton03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:allowUndo="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="查找通讯录"
+        />
+
+    <Button
+        android:id="@+id/mybutton04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:allowUndo="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="添加联系人"
+        />
+
+    <Button
+        android:id="@+id/mybutton05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:allowUndo="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="未使用"
+        />
+
+    <Button
+        android:id="@+id/mybutton06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:allowUndo="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:text="未使用"
+        />
+</LinearLayout>
